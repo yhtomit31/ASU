@@ -1,0 +1,426 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End CSS Reset - Eric Meyer */
+body {
+  max-width: 100%;
+  padding: 1em;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(1, 1, 1, 0.9);
+  color: white;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+header {
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+}
+
+header img {
+  width: 4em;
+  height: 8em;
+}
+
+header nav {
+  width: 288px;
+  display: flex;
+  padding-bottom: 4em;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header nav ul li {
+  width: 100%;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+header nav ul li ul li a {
+  height: 32px;
+  padding: 0.5em 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: black;
+}
+
+header nav ul a:hover {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+header .dropdown {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+header .dropdown .dropdown-content {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  text-align: center;
+}
+
+header .dropdown:hover .dropdown-content {
+  visibility: visible;
+  height: 32px;
+}
+
+/* Home  */
+section.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.home img {
+  max-width: 16em;
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+section.home nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 448px;
+}
+
+section.home nav ul li {
+  width: 25%;
+}
+
+section.home nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+section.home nav ul a:hover {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+section.home nav ul li {
+  display: block;
+  transition-duration: 0.5s;
+  width: 112px;
+  position: relative;
+}
+
+section.home nav ul li a:hover {
+  cursor: default;
+  pointer-events: none;
+}
+
+section.home nav ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  display: none;
+  font-size: 0.5em;
+  width: 112px;
+  background-color: white;
+  padding: 1px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid white;
+}
+
+section.home nav ul li ul li a {
+  color: black;
+}
+
+section.home nav ul li ul li a:hover {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+section.home nav li:hover > ul,
+section.home nav ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+section.home nav ul li ul li {
+  clear: both;
+  width: 100%;
+  padding-left: 1em;
+}
+
+/* End Home */
+
+/* AllMyExs - don't look at me I'm hideous - fix later */
+section.all-my-exs h1,
+.all-my-exs h4 {
+  width: 100%;
+}
+
+section.all-my-exs h1 {
+  font-size: 3em;
+}
+
+section.all-my-exs h4 {
+  font-size: 1.5em;
+  color: skyblue;
+  letter-spacing: 1px;
+}
+
+section.all-my-exs h4:first-of-type {
+  margin-left: 4em;
+}
+
+section.all-my-exs h4:nth-child(4) {
+  margin-top: 3em;
+}
+
+section.all-my-exs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.all-my-exs form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  margin-top: 1em;
+}
+
+section.all-my-exs form label {
+  margin-bottom: 0.25em;
+}
+
+section.all-my-exs form input {
+  width: 212px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+section.all-my-exs button {
+  border: 1px solid skyblue;
+  border-radius: 8px;
+  background-color: skyblue;
+  color: white;
+  padding: 0.75em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+section.all-my-exs button:hover,
+section.all-my-exs button:active,
+section.all-my-exs button:focus {
+  background-color: lightskyblue;
+}
+
+section.all-my-exs table {
+  width: 100%;
+  max-width: 960px;
+  border: 2px solid skyblue;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+section.all-my-exs table th {
+  font-weight: bold;
+  text-align: center;
+  width: 22.5%;
+  height: 2em;
+  vertical-align: middle;
+}
+
+section.all-my-exs table th:last-child {
+  width: 10%;
+}
+
+section.all-my-exs table td {
+  width: 22.5%;
+  height: 2em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+section.all-my-exs table td:first-child {
+  border-left: none;
+}
+
+section.all-my-exs table td:last-child {
+  border-right: none;
+  width: 10%;
+}
+
+section.all-my-exs table tr:nth-child(odd) {
+  background-color: white;
+  color: black;
+  letter-spacing: 1px;
+}
+
+section.all-my-exs table tr:nth-child(even) {
+  background-color: skyblue;
+  color: white;
+  letter-spacing: 1px;
+}
+/* End - AllMyExs */

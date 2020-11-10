@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        GIT418: Module/Chapter 7 : All My Ex's
+        Author: Tim Hein
+        Date: October 16th, 2020
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All My Ex's</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="js/libraries/modernizr.custom.05819.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/75d466a4cd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!-- onload to localStorage for previous list entries -->
+  <body onload="checkLocalExList()">
+    <header>
+      <a href="/index.html">
+        <img src="images/LogoVector.png" alt="Designs with a beard" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li class="dropdown">
+            <a href="#">asu</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="allMyExs.html">module 7</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" onclick="alert('coming soon')">about</a></li>
+          <li><a href="#" onclick="alert('coming soon')">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="all-my-exs">
+      <h1>All My Ex's</h1>
+      <h4>#BetterOff</h4>
+      <form class="ex-from" onsubmit="createEx(event)">
+        <label for="exName">Their Name</label>
+        <input
+          type="text"
+          name="exName"
+          id="exName"
+          placeholder="name"
+          required
+        />
+
+        <label for="exDumpDate">Day of Dumping</label>
+        <input type="date" name="exDumpDate" id="exDumpDate" onfocus="(this.type='date')" onblur="(this.type='text'); validateDate(event.target)" required />
+
+        <label for="exDumpReason">Why It's Over</label>
+        <input
+          type="text"
+          name="exDumpReason"
+          id="exDumpReason"
+          placeholder="reason"
+          required
+        />
+        <button type="submit">add her to the list</button>
+      </form>
+      
+      <h4>Table Of Ex's</h4>
+
+      <table class="ex-table" id="exTable">
+        <tr>
+          <th>Name</th>
+          <th>Day It Ended</th>
+          <th>Reason Why</th>
+          <th>Remove</th>
+        </tr>
+      </table>
+    </section>
+
+    <!-- contains scripts relevant to Module/Chapter 7 -->
+    <script src="js/scripts.js" defer></script>
+
+    <!-- validation scripts -->
+    <script src="js/validate.js" defer></script>
+
+  </body>
+</html>

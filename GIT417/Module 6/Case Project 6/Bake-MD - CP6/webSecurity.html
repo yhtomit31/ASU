@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bake M.D. | Baking up Web Security</title>
+    <meta name="author" content="Tim Hein" />
+    <meta name="description" content="Baking up Web Security" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fde2e2" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-32x32.png"
+    />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300;400&family=Spectral:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/libraries/modernizr.custom.05819.js"></script>
+    <script src="js/utilities.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/75d466a4cd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GIT417 - Module/Chapter 5 Script - run external function from utilities.js on window load -->
+    <script>
+      window.addEventListener("load", () => {
+        webSecurity();
+      });
+    </script>
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        Your browser has reached it's expiration date.
+        <a href="https://browsehappy.com/">Click here to upgrade your browser</a
+        >.
+      </p>
+    <![endif]-->
+
+    <header role="banner" aria-label="Header">
+      <a
+        href="index.html"
+        class="header-brand-container"
+        title="Link to Home page"
+      >
+        <!-- Acknowledge logo change to help with visual accessibility -->
+        <img src="images/logo.png" alt="Bake M.D. Logo" role="img" />
+        <h2>Bake M.D.</h2>
+      </a>
+
+      <nav role="navigation" aria-label="Navigation">
+        <ul>
+          <li class="is-active">
+            <a href="index.html" title="Link to Home page">home</a>
+          </li>
+          <li>
+            <a href="menu.html" title="Link to Menu page">menu</a>
+          </li>
+          <li>
+            <a href="blog.html" title="Link to Blog page">blog</a>
+          </li>
+          <li>
+            <a href="portfolio.html" title="Link to Portfolio page"
+              >portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="alert('Shopping Cart coming soon')">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="shopping-cart-badge-value">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="web-security browser-info">
+      <h2>Hello User</h2>
+
+      <h4>Here is a little info accessible from your browser</h4>
+
+      <ul>
+        <li>
+          Browser: <span class="browser"></span
+          ><span class="browser-version"></span>
+        </li>
+        <li>GeoLocation: <span class="geolocation"></span></li>
+        <li>Currently Online: <span class="online"></span></li>
+        <li>Platform: <span class="platform"></span></li>
+        <li>UserAgent: <span class="user-agent"></span></li>
+      </ul>
+    </section>
+    <section class="web-security screen-info">
+      <h4>And here is a little something about your screen</h4>
+
+      <ul>
+        <li>Available Height: <span class="available-height"></span></li>
+        <li>Available Width: <span class="available-width"></span></li>
+        <li>Color Depth: <span class="color-depth"></span></li>
+        <li>Display Height: <span class="display-height"></span></li>
+        <li>Display Width: <span class="display-width"></span></li>
+        <li>Pixel Depth: <span class="pixel-depth"></span></li>
+      </ul>
+    </section>
+
+    <section class="web-security best-practices">
+      <h4>Don't Worry...Be Educated On Web Security</h4>
+
+      <article class="link-item">
+        <a
+          href="https://www.vcpi.com/blog/best-practices-for-secure-web-browsing"
+          target="_blank"
+        >
+          10 Best Practices for Secure Web Browsing
+        </a>
+
+        <p> - Simple changes you can make to strengthen your browsing</p>
+      </article>
+
+      <article class="link-item">
+        <a
+          href="https://www.webroot.com/us/en/resources/tips-articles/online-activities-internet-security"
+        >
+          Safety Tips for Avoiding Spyware
+        </a>
+
+        <p> - Learn where Spyware hides and how to avoid it</p>
+      </article>
+
+      <article>
+        <a href="https://support.mozilla.org/en-US/kb/how-stay-safe-web"
+          >Stay Safe on the Web</a
+        >
+
+        <p> - Protect yourself online and additional resources</p>
+      </article>
+    </section>
+
+    <footer role="contentinfo">
+      <ul>
+        <li class="is-active">
+          <a href="index.html" title="Link to Home page">home</a>
+        </li>
+        <li>
+          <a href="menu.html" title="Link to Menu page">menu</a>
+        </li>
+        <li>
+          <a href="blog.html" title="Link to Blog page">blog</a>
+        </li>
+        <li>
+          <a href="portfolio.html" title="Link to Portfolio page">portfolio</a>
+        </li>
+        <li>
+          <a href="webSecurity.html" title="Link to Web Security"
+            >web security</a
+          >
+        </li>
+      </ul>
+
+      <div class="footer-brand-container">
+        <a href="index.html" title="Link to Home page">
+          <img src="images/logo.png" alt="Bake M.D. Logo" role="img" />
+          <h5>Bake M.D.</h5>
+        </a>
+        <div class="footer-social-media-container">
+          <a
+            href="http://facebook.com/Bakemedic/"
+            title="Link to Facebook page"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a
+            href="http://instagram.com/bake_m.d"
+            title="Link to Instagram page"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <address aria-label="Address">
+        <a
+          href="https://www.google.com/maps/place/Fulda,+MN+56131/@43.8655942,-95.6096476,15z/data=!3m1!4b1!4m5!3m4!1s0x878b6e1807a2e5cb:0xbf636ec0e774efd6!8m2!3d43.8705185!4d-95.6002856"
+          title="Link to address"
+          target="_blank"
+        >
+          123 Main Ave &mdash; Fulda, MN
+        </a>
+        <a href="tel:+5075555555" title="Link to phone number">5075555555</a>
+      </address>
+
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            class="valid-css"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+
+      <div class="footer-educational-message">
+        <span>Site for educational purposes only</span>
+      </div>
+    </footer>
+  </body>
+</html>

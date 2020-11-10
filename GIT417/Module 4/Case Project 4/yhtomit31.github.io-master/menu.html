@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bake M.D. | Baking up smiles with tasty menu items</title>
+    <meta name="author" content="Tim Hein" />
+    <meta name="description" content="Baking up smiles with tasty menu items" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fde2e2" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-32x32.png"
+    />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="js/libraries/modernizr.custom.05819.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300;400&family=Spectral:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/75d466a4cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // add event listener to window object and run after everything is loaded and parsed
+      window.addEventListener("load", () => {
+        // declare variables and assign
+        var badgeElement = document.getElementsByClassName(
+          "shopping-cart-badge-value"
+        );
+        var localStorageValue = localStorage.getItem("cartItems");
+
+        // check if value exists and assign to innerText of badge element
+        if (localStorageValue) {
+          badgeElement[0].innerText = localStorageValue;
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You browser has reached it's expiration date.
+        <a href="https://browsehappy.com/">Click here to upgrade your browser</a
+        >.
+      </p>
+    <![endif]-->
+
+    <header role="banner" aria-label="Header">
+      <a
+        href="index.html"
+        class="header-brand-container"
+        title="Link to Home page"
+      >
+        <!-- Acknowledge logo change to help with visual accessibility -->
+        <img src="images/logo.png" alt="Bake M.D. Logo" role="img" />
+        <h2>Bake M.D.</h2>
+      </a>
+
+      <nav role="navigation" aria-label="Navigation">
+        <ul>
+          <li>
+            <a href="index.html" title="Link to Home page">home</a>
+          </li>
+          <li class="is-active">
+            <a href="menu.html" title="Link to Menu page">menu</a>
+          </li>
+          <li>
+            <a href="blog.html" title="Link to Blog page">blog</a>
+          </li>
+          <li>
+            <a href="portfolio.html" title="Link to Portfolio page"
+              >portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="alert('Shopping Cart coming soon')">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="shopping-cart-badge-value">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page menu">
+      <section class="welcome">
+        <h1>
+          Baking sweet treats <br />
+          with love <br />daily
+        </h1>
+
+        <img
+          src="images/rosette-purple-blue-swirl.png"
+          role="img"
+          aria-label="White Frosting Rosette Cake with Blue and Purple Swirls"
+          alt="White Frosting Rosette Cake with Blue and Purple Swirls"
+        />
+      </section>
+
+      <h3>MENU</h3>
+
+      <div class="menu-wrapper">
+        <section
+          class="menu-item menu--macarons"
+          role="region"
+          aria-label="Macarons"
+        >
+          <a href="#" title="Link to Macarons page">
+            <img
+              src="images/home--menu-macaron.png"
+              alt="Macarons"
+              role="img"
+            />
+
+            <h4>macarons</h4>
+          </a>
+
+          <p>
+            The Delicate French pastry made with almond flour and my family
+            meringue recipe. This pastry is like two cookies that melt in your
+            mouth sandwiched with an assortment of flavors. One blissful bite
+            makes you close your eyes and feel like the snow has melted away and
+            the sun is out to play.
+            <em>$15 per dozen</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item menu--custom-cakes"
+          role="region"
+          aria-label="Custom Cakes"
+        >
+          <a href="#" title="Link to Custom Cakes page">
+            <img
+              src="images/menu--custom-cake.png"
+              alt="Custom Cakes"
+              role="img"
+            />
+
+            <h4>custom cakes</h4>
+          </a>
+
+          <p>
+            My cakes are double layer cakes made from scratch with old family
+            recipes. Decorated with my fluffy buttercream to obtain the look
+            from you inspiration pictures. Being from scratch I can fill your
+            cakes or create any flavor your little heart desires along with the
+            assortment of flavors listed in my flavor profile.
+            <em>Start at $10.</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item menu--sugar-cookies"
+          role="region"
+          aria-label="Sugar Cookies"
+        >
+          <a href="#" title="Link to Sugar Cookies page">
+            <img
+              src="images/menu--sugar-cookies.png"
+              alt="Sugar Cookies"
+              role="img"
+            />
+
+            <h4>sugar cookies</h4>
+          </a>
+
+          <p>
+            These cookies are sweet with a little citrus zing. Decorated with
+            the inspiration pictures received from you with either fluffy
+            buttercream or delicate royal icing – whichever suits your design
+            better. <em>$20 + per Dozen</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item menu--classic-cookies"
+          role="region"
+          aria-label="Classic Cookies"
+        >
+          <a href="#" title="Link to Classic Cookies page">
+            <img
+              src="images/menu--cookies.png"
+              alt="Monster Cookies"
+              role="img"
+            />
+
+            <h4>monster cookies</h4>
+          </a>
+
+          <p>
+            Monster, chocolate chip, wagon wheel, the list is expansive. These
+            cookies are large and in charge. <em>$20 per dozen</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item menu--cupcakes"
+          role="region"
+          aria-label="Cupcakes"
+        >
+          <a href="#" title="Link to Cupcakes page">
+            <img src="images/menu--cupcakes.png" alt="Cupcakes" role="img" />
+
+            <h4>cupcakes</h4>
+          </a>
+
+          <p>
+            Each cupcake is made unique with love. Refer to my flavor list or
+            send me a picture for decorating inspiration. Cupcake cakes are
+            always welcome. <em>$20 per dozen</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item menu--macaroon"
+          role="region"
+          aria-label="Macaroons"
+        >
+          <a href="#" title="Link to Macaroons page">
+            <img src="images/menu--macaroons.png" alt="Macaroons" role="img" />
+          </a>
+
+          <h4>macaroons</h4>
+          <p>
+            The traditional coconut cookie that the Midwest commonly mistakes my
+            macarons for. These cookies are light and fluffy with a little
+            almond flavor added in to cut the sweetness from the coconut. Half
+            are dipped in chocolate because sometimes we all just need to be a
+            little extra. <em>$15 per dozen</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item menu--kouchen"
+          role="region"
+          aria-label="Kouchens"
+        >
+          <a href="#" title="Link to Kouchens page">
+            <img src="images/menu--kouchens.jpg" alt="Kouchens" role="img" />
+
+            <h4>kouchens</h4>
+          </a>
+
+          <p>
+            This is the heart of my heart. This old German pastry is made with a
+            basic sweet roll dough, filled with an assortment of fruit fillings
+            traditionally apricot or prune, and topped with sweet buttery
+            crumbles. They can be referred to as kolaches, kochen, or koggen in
+            other areas. <em>$20 per dozen</em>
+          </p>
+        </section>
+
+        <section
+          class="menu-item mene--other"
+          role="region"
+          aria-label="Other Options"
+        >
+          <a href="#" title="Link to Other page">
+            <img
+              src="images/menu--other.png"
+              alt="Pie | Always looking for other recipes to make"
+              role="img"
+            />
+          </a>
+
+          <h4>everthing else</h4>
+
+          <p>
+            Don’t see what you like? – I LOVE CREATING! If it’s not listed here,
+            just ask me. I will track down a recipe – or use yours if you just
+            can’t figure out that old family recipe. Give me a jingle, send me a
+            message, we can even grab coffee and talk about your inspiration.
+          </p>
+        </section>
+      </div>
+
+      <section class="menu--order-form" role="region" aria-label="Order Now">
+        <h3>ORDER</h3>
+
+        <form aria-label="Order Form" class="form-container" role="form" action="https://formspree.io/mbjzpakb" method="POST">
+          <div class="form-item">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Your Name"
+            />
+          </div>
+
+          <div class="form-item">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter Your Phone Number"
+            />
+          </div>
+
+          <div class="form-item">
+            <label for="orderDetails">Order Details</label>
+            <textarea
+              name="orderDetails"
+              id="orderDetails"
+              role="textbox"
+            ></textarea>
+          </div>
+
+          <button type="submit" role="button">submit</button>
+        </form>
+      </section>
+    </div>
+
+    <footer role="contentinfo">
+      <ul>
+        <li>
+          <a href="index.html" title="Link to Home page">home</a>
+        </li>
+        <li class="is-active">
+          <a href="menu.html" title="Link to Menu page">menu</a>
+        </li>
+        <li>
+          <a href="blog.html" title="Link to Blog Page">blog</a>
+        </li>
+        <li>
+          <a href="portfolio.html" title="Link to Portfolio page">portfolio</a>
+        </li>
+      </ul>
+
+      <div class="footer-brand-container">
+        <a href="index.html" title="Link to Home page">
+          <img src="images/logo.png" alt="Bake M.D. Logo" role="img" />
+          <h5>Bake M.D.</h5>
+        </a>
+        <div class="footer-social-media-container">
+          <a
+            href="http://facebook.com/Bakemedic/"
+            title="Link to Facebook page"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a
+            href="http://instagram.com/bake_m.d"
+            title="Link to Instgram page"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <address aria-label="Address">
+        <a
+          href="https://www.google.com/maps/place/Fulda,+MN+56131/@43.8655942,-95.6096476,15z/data=!3m1!4b1!4m5!3m4!1s0x878b6e1807a2e5cb:0xbf636ec0e774efd6!8m2!3d43.8705185!4d-95.6002856"
+          title="Link to Address"
+          target="_blank"
+        >
+          123 Main Ave &mdash; Fulda, MN
+        </a>
+        <a href="tel:+5075555555">5075555555</a>
+      </address>
+
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            class="valid-css"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+
+      <div class="free-pik">
+        Icons made by
+        <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com</a
+        >
+      </div>
+
+      <div class="footer-educational-message">
+        <span>Site for educational purposes only</span>
+      </div>
+    </footer>
+  </body>
+</html>

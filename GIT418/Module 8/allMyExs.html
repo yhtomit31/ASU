@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        GIT418: Module/Chapter 8 : All My Ex's
+        Author: Tim Hein
+        Date: October 23th, 2020
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All My Ex's</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="js/libraries/modernizr.custom.05819.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/75d466a4cd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!-- onload to localStorage for previous list entries -->
+  <body onload="checkLocalExList()">
+    <header>
+      <a href="/index.html">
+        <img src="images/LogoVector.png" alt="Designs with a beard" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li class="dropdown">
+            <a href="#">asu</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="allMyExs.html">module 7</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" onclick="alert('coming soon')">about</a></li>
+          <li><a href="#" onclick="alert('coming soon')">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="all-my-exs">
+      <h1>All My Ex's</h1>
+      <h4>#BetterOff</h4>
+      <form class="ex-from" onsubmit="createEx(event)">
+        <div class="form-group">
+          <label for="exName">Their Name</label>
+          <input
+            type="text"
+            name="exName"
+            id="exName"
+            placeholder="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exDumpDate">Day of Dumping</label>
+          <input
+            type="date"
+            name="exDumpDate"
+            id="exDumpDate"
+            onfocus="(this.type='date')"
+            onblur="(this.type='text'); validateDate(event.target)"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exDumpReason">Why It's Over</label>
+          <input
+            type="text"
+            name="exDumpReason"
+            id="exDumpReason"
+            placeholder="reason"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Dislikes</label>
+          <div class="dislikes-options">
+            <div class="dislikes-options--option">
+              <label for="dislikePersonality"
+                >personality
+                <input
+                  type="checkbox"
+                  name="dislikesOptions"
+                  id="dislikePersonality"
+                  value="personality"
+                  onclick="handleDislikes(event)"
+                />
+                <span></span>
+              </label>
+            </div>
+            <div class="dislikes-options--option">
+              <label for="dislikeViews"
+                >views
+                <input
+                  type="checkbox"
+                  name="dislikesOptions"
+                  id="dislikeViews"
+                  value="views"
+                  onclick="handleDislikes(event)"
+                />
+                <span></span>
+              </label>
+            </div>
+            <div class="dislikes-options--option">
+              <label for="dislikeStyle"
+                >style
+                <input
+                  type="checkbox"
+                  name="dislikesOptions"
+                  id="dislikeStyle"
+                  value="style"
+                  onclick="handleDislikes(event)"
+                />
+                <span></span>
+              </label>
+            </div>
+            <div class="dislikes-options--option">
+              <label for="dislikeBehaviors"
+                >behaviors
+                <input
+                  type="checkbox"
+                  name="dislikesOptions"
+                  id="dislikeBehaviors"
+                  value="behaviors"
+                  onclick="handleDislikes(event)"
+                />
+                <span></span>
+              </label>
+            </div>
+            <div class="dislikes-options--option">
+              <label for="dislikeOtherPerson"
+                >other person
+                <input
+                  type="checkbox"
+                  name="dislikesOptions"
+                  id="dislikeOtherPerson"
+                  value="other person"
+                  onclick="handleDislikes(event)"
+                />
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <p class="dislikes-display">dislikes list</p>
+          </div>
+        </div>
+
+        <button type="submit">add them to the list</button>
+      </form>
+
+      <h4>Table Of Ex's</h4>
+
+      <div class="ex-table-container table-responsive">
+        <table class="ex-table" id="exTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Day It Ended</th>
+              <th>Reason Why</th>
+              <th>Dislikes</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- contains scripts relevant to Module/Chapter 7 -->
+    <script src="js/scripts.js" defer></script>
+
+    <!-- validation scripts -->
+    <script src="js/validate.js" defer></script>
+  </body>
+</html>

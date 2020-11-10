@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bake M.D. | Baking up smiles from the bakers mind</title>
+    <meta name="author" content="Tim Hein" />
+    <meta name="description" content="Baking up smiles from the bakers mind" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fde2e2" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-32x32.png"
+    />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="js/libraries/modernizr.custom.05819.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/75d466a4cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300;400&family=Spectral:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // add event listener to window object and run after everything is loaded and parsed
+      window.addEventListener("load", () => {
+        // declare variables and assign
+        var badgeElement = document.getElementsByClassName(
+          "shopping-cart-badge-value"
+        );
+        var localStorageValue = localStorage.getItem("cartItems");
+
+        // check if value exists and assign to innerText of badge element
+        if (localStorageValue) {
+          badgeElement[0].innerText = localStorageValue;
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You browser has reached it's expiration date.
+        <a href="https://browsehappy.com/">Click here to upgrade your browser</a
+        >.
+      </p>
+    <![endif]-->
+
+    <header role="banner" aria-label="Header">
+      <a
+        href="index.html"
+        class="header-brand-container"
+        title="Link to Home page"
+      >
+        <!-- Acknowledge logo change to help with visual accessibility -->
+        <img src="images/logo.png" alt="Bake M.D. Logo" role="img" />
+        <h2>Bake M.D.</h2>
+      </a>
+
+      <nav role="navigation" aria-label="Navigation">
+        <ul>
+          <li>
+            <a href="index.html" title="Link to Home page">home</a>
+          </li>
+          <li>
+            <a href="menu.html" title="Link to Menu page">menu</a>
+          </li>
+          <li class="is-active">
+            <a href="blog.html" title="Link to Blog page">blog</a>
+          </li>
+          <li>
+            <a href="portfolio.html" title="Link to Portfolio page"
+              >portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="alert('Shopping Cart coming soon')">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="shopping-cart-badge-value">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page blog">
+      <section class="welcome">
+        <h1>
+          Baking thoughts<br />
+          with love<br />
+          from the bakers mind
+        </h1>
+
+        <img
+          src="images/website--star-wars-prop-cake.png"
+          role="img"
+          alt="Star Wars Prop Cake with Millennium Falcon"
+          aria-label="Star Wars Prop Cake with Millennium Falcon"
+        />
+      </section>
+
+      <h3>BLOG</h3>
+
+      <div class="blog-wrapper">
+        <article class="article-item" id="beginning" role="article">
+          <div class="blog-media">
+            <img
+              src="images/Owner.png"
+              alt="Focus to the Last Centimeter"
+              role="img"
+            />
+          </div>
+
+          <div class="blog-message">
+            <h4>The Beginning of a Fresh Baked Blog</h4>
+
+            <p>
+              Dreams. We all have them. My mom would always tell me we would run
+              a bakery together. I thought she was a little nut-so at the time.
+              I was little. I wanted to be a doctor, lawyer, singer - anything,
+              but a baker. Funny how things change. College. Somewhere while
+              studying to become an actuary (a numbers scientist) I felt a
+              gravitational pull toward the kitchen. Was it my memories of
+              baking with my mom? Was it my dad's entrepreneurial mindset
+              rubbing off on me? I don't know, but it didn't take long for me to
+              accept that calling and change my major to Business Management.
+              Why not culinary arts? My mom would always tell me that culinary
+              school is a waste I can learn from watching, trying, and trying
+              and trying again. "The little engine that could. I think I can. I
+              think I can. I think I can." She would say while flipping the
+              donuts or folding the kouchen. So I began my journey. Bluebird
+              Cakery. I got my internship. I helped this startup company get off
+              the ground and grew so much in this company I don't have enough
+              good words to say about my mentor Kelsy Wilison. At Bluebird I
+              learned how to effectively run a business and decorate a cake. My
+              internship evolved to a job where I got to become the Store
+              Manager!! NO WAY! Dreams do come true! Right? Well almost. My
+              heart. My calling. It is not in Faribault, MN. It is in my roots
+              where my calling was sparked. The kitchen I grew up in. The area I
+              grew up in. That calling got stronger after I had a kid. I left my
+              DREAM JOB and moved my little family to where my heart yearned.
+              Fulda, MN. I grew up 4 miles west of Heron Lake, MN. Not far from
+              Fulda. My husband grew up outside of Fulda. Most of my family has
+              moved far away or joined God. My husband’s family is still pretty
+              centrally located around Fulda. My heart is close enough to the
+              farm I grew up on to be satisfied. My kids are growing up knowing
+              their cousins. I can run a bakery anywhere right? RIGHT! Bake M.D.
+              No, I am not a doctor. M is for MaDonna. My mom, she would plan
+              out baking days then wake up at 2 a.m. and start. Isn’t no way
+              anyone in their right mind will get up at 2 a.m. to bake for fun?
+              Except my mom. So I would not join her until 8 am like a normal
+              person. Oh, but by 8 a.m. my mom is finishing the last donuts and
+              has the whole day done. "It's okay we can run to the store and
+              make more." My favorite part? Handing the goodies out to
+              neighbors, friends, relatives, complete strangers and seeing the
+              joy sparked by our simple gesture. D is for David. My dad, he
+              would see value in everything. He would turn nothing into
+              something. He is my constant inspiration to create and work hard.
+              This company is the beginning of my dreams. This page. This is
+              where I will share my dreams with you. I will use the blog to
+              share my experiences as I try and try and try new recipes again. I
+              will also use this site to share my products, my decorating
+              classes, my heart. Enjoy.
+            </p>
+          </div>
+        </article>
+
+        <article class="article-item" id="inspiring" role="article">
+          <div class="blog-media">
+            <img
+              src="images/teachers-cake.png"
+              alt="Teachers Appreciation Cake"
+              role="img"
+            />
+          </div>
+
+          <div class="blog-message">
+            <h4>Starting Every Cake with a Solid Recipe</h4>
+
+            <p>
+              This week I was asked to make a teacher appreciation cake for the
+              teachers that helped develop me. Teachers you really do touch our
+              lives forever. I always LOVED school. I still remember story time
+              in second grade with Mrs. Aiden. When it was my turn to pick the
+              bonus spelling word in 1st grade with Mrs. Millbrath - she thought
+              I would pick a hard word like elephant, I choose "it" because my
+              dad would always make a joke about hard words to spell and ask me
+              to spell "it."😂 My love of math was sparked in Mr. Zellar's
+              class. Mrs. Renzikoski would do so much to make spanish fun
+              including serving up spanish food🥰🥰. I'll never forget making a
+              haunted house in Mr. Graef's class and Ms. Guenther always had
+              good book lists. My thank you to teachers list doesn't end there.
+              I could never list all the moments all the teachers. You would ve
+              reading forever! Instead enjoy this cake.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="article-item blog--video"
+          role="region"
+          aria-label="Blog Video"
+        >
+          <div class="blog-media">
+            <video
+              src="videos/blog-video-frosting-chocolate-cake--subtitles.mp4"
+              controls
+              loop
+            ></video>
+          </div>
+
+          <div class="blog-message">
+            <h4>Piping Chocolate Cake, Surrounded by Love</h4>
+
+            <p>
+              There is just something so satisfying about chocolate drippage.
+              The way it looks so smooth The way it shines when the light hits.
+              The way it spreads across the top When it hits the edge and just
+              every so slowly spills until it comes to that unpredictable stop
+              halfway down the cake. I could keep explaining or you can just
+              watch the satisfaction right here.
+            </p>
+          </div>
+        </article>
+
+        <article class="article-item" id="ermine" role="article">
+          <div class="blog-media">
+            <img
+              src="images/strawberry-cake.png"
+              alt="Strawberry Cake with Ermine Frosting"
+              role="img"
+            />
+          </div>
+
+          <div class="blog-message">
+            <h4>Lets Talk About Ermine Frosting</h4>
+
+            <p>
+              Lets talk about Ermine frosting. This cake was a bit of a
+              challenge for me. "I want a fresh summer cake. With whipped
+              frosting" Okay well my favorite stabilized whip product is hard to
+              get small scale. And heavy whip stabilized has a 24 hour "life." I
+              asked a LOT of bakers and a lot of them suggested adding pudding
+              to the heavy whip. 🤢 Then one person suggested Ermine. I have
+              never heard of it. Looked it up and it reminded me of a recipe my
+              mom has flagged as "Very good" but THERE'S FLOUR IN IT! That fact
+              alone kept me away from it. I am SO GLAD I tried this recipe. It
+              is SO LIGHT AND FLUFFY! not quite whipped cream but the texture is
+              like marshmellows and the flavor is simple like my white cake.
+              Anyways here is what I learned. 👉Roux - Flour and milk simmerred
+              to a thick paste 👉Creating a roux takes patience and the thicker
+              the better. 👉Stick your roux in the fridge or make it the night
+              before if leaving at room temp to cool. 👉A whisk makes a fluffier
+              frosting than a paddle attachment. 👉The world of frosting is vast
+              and wide. Next I'm trying Russian Buttercream. Any other
+              requests?😍 Feeling proud in Fulda, Minnesota.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <footer role="contentinfo">
+      <ul>
+        <li>
+          <a href="index.html" title="Link to Home page">home</a>
+        </li>
+        <li>
+          <a href="menu.html" title="Link to menu page">menu</a>
+        </li>
+        <li class="is-active">
+          <a href="blog.html" title="Link to Blog page">blog</a>
+        </li>
+        <li>
+          <a href="portfolio.html" title="Link to Portfolio page">portfolio</a>
+        </li>
+      </ul>
+
+      <div class="footer-brand-container">
+        <a href="index.html" title="Link to Bake M.D. Home">
+          <img src="images/logo.png" alt="Bake M.D. Logo" role="img" />
+          <h5>Bake M.D.</h5>
+        </a>
+        <div class="footer-social-media-container">
+          <a
+            href="http://facebook.com/Bakemedic/"
+            title="Link to Facebook page"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a
+            href="http://instagram.com/bake_m.d"
+            title="Link to Instagram page"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <address role="region" aria-label="Address">
+        <a
+          href="https://www.google.com/maps/place/Fulda,+MN+56131/@43.8655942,-95.6096476,15z/data=!3m1!4b1!4m5!3m4!1s0x878b6e1807a2e5cb:0xbf636ec0e774efd6!8m2!3d43.8705185!4d-95.6002856"
+          title="Link to Address"
+          target="_blank"
+        >
+          123 Main Ave &mdash; Fulda, MN
+        </a>
+        <a href="tel:+5075555555" title="Link to Phone Number">5075555555</a>
+      </address>
+
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            class="valid-css"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+
+      <div class="free-pik">
+        Icons made by
+        <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com</a
+        >
+      </div>
+
+      <div class="footer-educational-message">
+        <span>Site for educational purposes only</span>
+      </div>
+    </footer>
+  </body>
+</html>

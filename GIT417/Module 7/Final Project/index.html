@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodes with JavaScript</title>
+
+    <!-- Link to JavaScript file -->
+    <script src="scripts.js" defer></script>
+
+    <!-- Link to modernizr -->
+    <script src="modernizr.custom.05819.js"></script>
+
+    <!-- Link to style.css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Link to highlight js, css theme and initialize -->
+    <script src="highlight.pack.js"></script>
+    <link rel="stylesheet" href="vs.css" />
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/pze2hxl.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+    <link rel="shortcut-icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+  <body onload="scrollNavigation(document.getElementsByClassName('home')[0])">
+    <nav role="navigation">
+      <ul>
+        <li>
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            class="home-nav-button"
+            onclick="scrollNavigation(document.getElementsByClassName('home')[0])"
+            title="Navigation to Home Page"
+          >
+            home
+          </button>
+        </li>
+        <li>
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            class="about-nodes-nav-button"
+            onclick="scrollNavigation(document.getElementsByClassName('about-nodes')[0])"
+            title="Navigation To About Nodes"
+          >
+            what's a node
+          </button>
+        </li>
+        <li>
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            class="adding-nodes-nav-button"
+            onclick="scrollNavigation(document.getElementsByClassName('adding-nodes')[0])"
+            title="Navigation to Adding Nodes"
+          >
+            adding nodes
+          </button>
+        </li>
+        <li>
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            class="removing-nodes-nav-button"
+            onclick="scrollNavigation(document.getElementsByClassName('removing-nodes')[0])"
+            title="Navigation to Removing Nodes"
+          >
+            removing nodes
+          </button>
+        </li>
+        <li>
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            class="example-nav-button"
+            onclick="scrollNavigation(document.getElementsByClassName('example')[0])"
+            title="Navigation to Examples"
+          >
+            example
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="home" role="region" aria-label="Home">
+        <header>
+          <h1>Add & Remove Document Nodes</h1>
+          <h3 class="with-javascript">with JavaScript</h3>
+        </header>
+
+        <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+        <button
+          onclick="scrollNavigation(document.getElementsByClassName('about-nodes')[0])"
+        >
+          let's begin
+        </button>
+      </section>
+
+      <section class="about-nodes" role="region" aria-label="About Nodes">
+        <h2>Let's Talk About Nodes</h2>
+
+        <h4>What is a node?</h4>
+        <p>
+          When talking in terms of the
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            target="_blank"
+            >DOM</a
+          >
+          a node is a single item in the node tree. Examples include the
+          document itself and all the elements, text, and comments.
+        </p>
+
+        <h5q>Node Tree</h5q>
+        <img src="images/nodeTree.png" alt="Image of Node Tree" />
+
+        <div class="button-container">
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('home')[0])"
+          >
+            home <i class="fas fa-arrow-up"></i>
+          </button>
+
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('adding-nodes')[0])"
+          >
+            adding nodes <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="adding-nodes" role="region" aria-label="Adding Nodes">
+        <h2>Adding Nodes</h2>
+        <p>
+          Adding nodes to the DOM can be done using the appendChild() method.
+          The appendChild method adds the node to the end of the list of
+          children of a given parent node.
+        </p>
+
+        <div class="section-group">
+          <h4>Syntax</h4>
+          <pre><code>parentNode.appendChild(childNode);</code></pre>
+        </div>
+
+        <div class="section-group">
+          <h4>Parameters</h4>
+          <div class="sub-group">
+            <span>childNode</span>
+            <p>
+              The node to be added to the DOM. Can be newly created with
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+                target="_blank"
+                >document.createElement()</a
+              >
+              or already present on the DOM. If node is already present in the
+              DOM, the node is removed and then appended to its new position.
+            </p>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('about-nodes')[0])"
+          >
+            about nodes<i class="fas fa-arrow-up"></i>
+          </button>
+
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('removing-nodes')[0])"
+          >
+            removing nodes<i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="removing-nodes" role="region" aria-label="Removing Nodes">
+        <h2>Removing Nodes</h2>
+        <p>
+          Removing a node from the
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            target="_blank"
+            >DOM</a
+          >
+          can be done using removeChild().
+        </p>
+
+        <div class="section-group">
+          <h4>Syntax</h4>
+          <pre><code>
+            var childNode = document.getElementById("childNodeId");
+            parentNode.removeChild(childNode);
+          </code></pre>
+        </div>
+
+        <div class="section-group">
+          <h4>Parameters</h4>
+          <div class="sub-group">
+            <span>childNode</span>
+            <p>The node to be removed from the DOM.</p>
+          </div>
+        </div>
+
+        <div class="section-group">
+          <p>
+            The removed node can be assigned to a variable to keep it available
+            for future use.
+          </p>
+        </div>
+
+        <div class="button-container">
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('adding-nodes')[0])"
+          >
+            adding nodes<i class="fas fa-arrow-up"></i>
+          </button>
+
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('example')[0])"
+          >
+            example<i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="example" role="region">
+        <h3>Now for the FUN!</h3>
+
+        <h5>Brining it all together</h5>
+
+        <pre><code>
+          // How's your day
+          // initialize and assign variables to appropriate DOM elements
+          var goodDayButton = document.getElementById("goodDayButton");
+          var goodDayFaceParent = document.getElementById("goodDayFace");
+
+          //add click event listener to 'goodDay' button
+          goodDayButton.addEventListener("click", () => {
+            // if fa-smile has length return - prevents multiple faces
+            if (document.getElementsByClassName("fa-smile").length) {
+              &nbsp;&nbsp;return;
+            }
+
+            // create goodDayFace element, set classList and style
+            var goodDayFace = document.createElement("i");
+            goodDayFace.classList.add("far");
+            goodDayFace.classList.add("fa-smile");
+            goodDayFace.style.display = "flex";
+            goodDayFace.style.color = "lightyellow";
+            goodDayFace.style.fontSize = "64px";
+
+            // append new element to parent container
+            goodDayFaceParent.appendChild(goodDayFace);
+
+            // check for baddDayFace and removeChild if true
+            var badDayFaceParent = document.getElementById("badDayFace");
+            var badDayFace = document.getElementsByClassName("fa-frown")[0];
+
+            if (badDayFace) {
+              &nbsp;&nbsp;badDayFaceParent.removeChild(badDayFace);
+              &nbsp;}
+          });
+
+          // initialize and assign variables to appropriate DOM elements
+          var badDayButton = document.getElementById("badDayButton");
+          var badDayFaceParent = document.getElementById("badDayFace");
+
+          //add click event listener to 'badDay' button
+          badDayButton.addEventListener("click", () => {
+            // if fa-frown has length return - prevents multiple faces
+            if (document.getElementsByClassName("fa-frown").length) {
+              &nbsp;&nbsp;return;
+            }
+
+            // create badDayFace element, set classList and style
+            var badDayFace = document.createElement("i");
+            badDayFace.classList.add("far");
+            badDayFace.classList.add("fa-frown");
+            badDayFace.style.display = "flex";
+            badDayFace.style.color = "darkgray";
+            badDayFace.style.fontSize = "64px";
+
+            // append new element to parent container
+            badDayFaceParent.appendChild(badDayFace);
+
+            // check for goodDayFace and removeChild if true
+            var goodDayFaceParent = document.getElementById("goodDayFace");
+            var goodDayFace = document.getElementsByClassName("fa-smile")[0];
+            
+            if (goodDayFace) {
+              &nbsp;&nbsp;goodDayFaceParent.removeChild(goodDayFace);
+              &nbsp;}
+
+          });
+        </code></pre>
+
+        <div class="face-container">
+          <h5>How has your day been?</h5>
+          <button id="goodDayButton">good day</button>
+          <button id="badDayButton">bad day</button>
+
+          <div class="icon-container">
+            <div id="goodDayFace"></div>
+            <div id="badDayFace"></div>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <!-- functional call to scrollNavigation, located in scripts.js, to scroll the page to passed element -->
+          <button
+            onclick="scrollNavigation(document.getElementsByClassName('removing-nodes')[0])"
+          >
+            removing nodes<i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
