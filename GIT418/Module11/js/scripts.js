@@ -165,13 +165,6 @@ function onLoadAllMyExs() {
     checkLocalExList();
   }
 }
-window.addEventListener(
-  "load",
-  () => {
-    getUserPosition();
-  },
-  false
-);
 
 /**
  *  GIT418 - Module/Chapter 10 - Case Project
