@@ -160,6 +160,10 @@ header nav {
   padding-bottom: 4em;
 }
 
+header .nav.nav-tabs {
+  border-bottom: none;
+}
+
 header nav ul {
   display: flex;
   justify-content: space-between;
@@ -232,85 +236,25 @@ section.home img {
   margin-bottom: 2em;
 }
 
-section.home nav {
-  margin-bottom: 32px;
+section.home .nav.nav-tabs {
+  border-bottom: none;
 }
 
-section.home nav ul {
-  display: flex;
-  justify-content: space-between;
-  width: 448px;
+.nav-tabs .dropdown-menu {
+  left: -64%;
 }
 
-section.home nav ul li {
-  width: 25%;
-}
-
-section.home nav ul a {
+section.home .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
   color: white;
-  text-decoration: none;
-  font-size: 2em;
+  outline: black;
 }
-
-section.home nav ul a:hover {
-  color: skyblue;
-  text-decoration: underline;
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover,
+section.home .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 8px;
 }
-
-section.home nav ul li {
-  display: block;
-  transition-duration: 0.5s;
-  width: 112px;
-  position: relative;
-}
-
-section.home nav ul li a:hover {
-  cursor: default;
-  pointer-events: none;
-}
-
-section.home nav ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  display: none;
-  font-size: 0.5em;
-  width: 112px;
-  padding: 1px;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-section.home nav ul li ul li a {
-  padding-top: 0.5em;
-}
-
-section.home nav ul li ul li a:hover {
-  cursor: pointer;
-  pointer-events: all;
-}
-
-section.home nav li:hover > ul,
-section.home nav ul li ul:hover,
-section.home nav li:active > ul,
-section.home nav ul li ul:active {
-  visibility: visible;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-section.home nav ul li ul li {
-  clear: both;
-  width: 100%;
-  padding-left: 1em;
-}
-
 /* End Home */
 
 /* AllMyExs - don't look at me I'm hideous - fix later */
