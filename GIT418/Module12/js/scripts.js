@@ -470,25 +470,3 @@ function showErrorMessage(message) {
   errorMessageContainer.style.display = "grid";
   document.querySelector(".error-message .message").innerHTML = message;
 }
-
-/**
- *  Even Listeners
- *    - load: pre-set API request
- *    - far.fa-times-circle click: close error message
- *    - #solDatePicker click: remove invalid and clear innerHTML
- **/
-window.addEventListener("load", () => {
-  mission = new MissionInfo("curiosity", "2015-6-3")
-  requestRoverImgs(mission);
-})
-
-document.querySelector(".far.fa-times-circle").addEventListener("click", () => {
-  document.querySelector(".mars-rover.error-message").style.display = "none";
-})
-
-document.querySelector("#solDatePicker").addEventListener("click", (event) => {
-  var invalidDate = document.querySelector(".date-message");
-
-  event.target.classList.remove("invalid");
-  invalidDate.innerHTML = "";
-})

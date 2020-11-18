@@ -33,6 +33,13 @@
       src="https://kit.fontawesome.com/75d466a4cd.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      window.addEventListener("load", () => {
+      mission = new MissionInfo("curiosity", "2015-6-3")
+      requestRoverImgs(mission);
+    })
+    </script>
   </head>
   <body>
     <header role="banner" aria-label="Header">
@@ -105,6 +112,7 @@
             type="date"
             name="solDatePicker"
             id="solDatePicker"
+            onclick="resetErrors()"
           />
           <div class="invalid date-message"></div>
         </div>
@@ -119,7 +127,7 @@
 
     <section class="mars-rover error-message">      
       <div class="error-message-container">
-        <i class="far fa-times-circle"></i>
+        <i class="far fa-times-circle" onclick="document.querySelector('.mars-rover.error-message').style.display = 'none'"></i>
         <h3>Error</h3>
         <p class="message"></p>
       </div>
