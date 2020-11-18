@@ -27,10 +27,15 @@ function createEx(event) {
     return;
   }
 
+  /**
+   * GIT418 Module6/Chapter12: Intro To jQuery
+   *  - replaced document.getElementById('').value w/ $('').val();
+   *  - line 52: replaed document.getElementsByClassname('')[0].innerHTML w/ $('').innerHTML
+   */
   // Gets values from form based on ID and assigns to variable
-  var exName = document.getElementById("exName").value;
-  var exDumpDate = document.getElementById("exDumpDate").value;
-  var exDumpReason = document.getElementById("exDumpReason").value;
+  var exName = $("#exName").val();                //document.getElementById("exName").value;
+  var exDumpDate = $("#exDumpDate").val();        //document.getElementById("exDumpDate").value;
+  var exDumpReason = $("#exDumpReason").val();    //document.getElementById("exDumpReason").value;
 
   // Creates new object based on object constructor
   var addEx = new Ex(exName, exDumpDate, exDumpReason, exDislikes);
@@ -45,7 +50,7 @@ function createEx(event) {
   document.forms[0].reset();
 
   // Resets Dislikes Display
-  document.getElementsByClassName("dislikes-display")[0].innerHTML = "";
+  $(".dislikes-display").innerHTML = "";
 }
 
 function addToExTable(ex) {
@@ -265,9 +270,6 @@ function webSecurity() {
   pixelDepth.innerHTML = screen.pixelDepth;
 }
 
-/**
- * GIT418 - Module/Chapter11 - Updating Web Pages with AJAX
- */
 // Custom Object Constructor
  function MissionInfo(rover, date) {
    this.rover = rover;
@@ -460,7 +462,6 @@ function requestRoverImgs(missionInfo) {
     xhr.send();
   } catch (error) {
     showErrorMessage(error);
-    console.log(error);
   }
 }
 

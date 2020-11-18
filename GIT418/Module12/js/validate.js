@@ -31,7 +31,6 @@ form.addEventListener("focusout", (event) => {
 });
 
 /**
- * GIT418 - Module/Chapter 9
  * Validate Text Input
  *  - no special characters
  *  - maximum of 180 characters
@@ -75,7 +74,6 @@ function validateTextInput(input) {
 }
 
 /**
- * GIT418 - Module/Chapter 9
  * Validate Date
  *  - past dates only
  *  - last 100 years - reasonable dates
@@ -123,7 +121,6 @@ function validateDate(input) {
 }
 
 /**
- * GIT418 - Module/Chapter 9
  * Validate Checkboxes
  *  - at least 1 selected
  * 
@@ -136,7 +133,6 @@ function validateCheckboxes(inputs) {
     // try...catch for validation
     try {
         for (var x = 0; x <= inputs.length - 1; x++) {
-            debugger;
             if (!inputs[x].checked) {
                 counter++
             }
@@ -145,7 +141,8 @@ function validateCheckboxes(inputs) {
                 hasErrors = true;
                 throw "must select one";
             } else {
-                display.style.color = "black";
+                display.style.color = "white";
+                display.innerHTML = "";
             }
         }
     } catch (error) {
@@ -162,7 +159,6 @@ function validateCheckboxes(inputs) {
 }
 
 /**
- * GIT418 - Module/Chapter 9
  * Form submit validation
  * 
  */
