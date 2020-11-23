@@ -30,7 +30,7 @@ function createEx(event) {
   /**
    * GIT418 Module6/Chapter12: Intro To jQuery
    *  - replaced document.getElementById('').value w/ $('').val();
-   *  - line 52: replaed document.getElementsByClassname('')[0].innerHTML w/ $('').innerHTML
+   *  - line 53: replaed document.getElementsByClassname('')[0].innerHTML w/ $('').innerHTML
    */
   // Gets values from form based on ID and assigns to variable
   var exName = $("#exName").val();                //document.getElementById("exName").value;
