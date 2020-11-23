@@ -50,7 +50,7 @@ function createEx(event) {
   document.forms[0].reset();
 
   // Resets Dislikes Display
-  $(".dislikes-display").innerHTML = "";
+  $(".dislikes-display").html = "";
 }
 
 function addToExTable(ex) {
