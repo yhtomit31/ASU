@@ -1,0 +1,685 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End CSS Reset - Eric Meyer */
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(1, 1, 1, 0.9);
+  color: white;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+::-webkit-scrollbar {
+  -webkit-overflow-scrolling: auto;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+ul li a:hover + .dropdown-menu, .dropdown-menu:hover {
+  display: block;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover,
+section.home .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+header {
+  padding: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+header img {
+  width: 4em;
+  height: 8em;
+}
+
+header nav {
+  width: 288px;
+  display: flex;
+  padding-bottom: 4em;
+}
+
+header .nav.nav-tabs {
+  border-bottom: none;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header nav ul li {
+  width: 100%;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+header nav ul li ul li a {
+  height: 100%;
+  padding: 0.5em 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-top: 1px solid black;
+}
+
+header nav ul a:hover {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+header .dropdown {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+header .dropdown .dropdown-content {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header .dropdown:hover .dropdown-content {
+  visibility: visible;
+  height: 32px;
+}
+
+/* Home  */
+section.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.home img {
+  max-width: 16em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+section.home .nav.nav-tabs {
+  border-bottom: none;
+}
+
+section.home .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+  color: white;
+  outline: black;
+}
+
+/* End Home */
+
+/* AllMyExs - don't look at me I'm hideous - fix later */
+section.all-my-exs h1 {
+  width: 100%;
+}
+
+section.all-my-exs h1 {
+  font-size: 3em;
+}
+
+section.all-my-exs h4 {
+  font-size: 1.5em;
+  color: skyblue;
+  letter-spacing: 1px;
+}
+
+section.all-my-exs h4:first-of-type {
+  margin-left: 4em;
+}
+
+section.all-my-exs h4:nth-child(4) {
+  margin-top: 3em;
+}
+
+section.all-my-exs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.all-my-exs form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+section.all-my-exs form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em auto;
+}
+
+section.all-my-exs form .form-group:last-of-type {
+  margin-bottom: 1em;
+}
+
+section.all-my-exs form label {
+  margin-bottom: 0.25em;
+}
+
+section.all-my-exs form input {
+  width: 212px;
+  text-align: center;
+}
+
+section.all-my-exs .dislikes-options {
+  display: flex;
+  justify-content: center;
+  width: 212px;
+  flex-wrap: wrap;
+  background-color: white;
+  color: black;
+  padding: 0.5em;
+  border-radius: 8px;
+}
+
+section.all-my-exs .dislikes-options--option {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+section.all-my-exs .dislikes-options--option input {
+  width: 10%;
+  /* margin-right: 0.75em; */
+  position: absolute;
+  left: -5px;
+  display: none;
+}
+
+section.all-my-exs .dislikes-options--option span {
+  height: 10px;
+  width: 10px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin-right: 1em;
+  position: absolute;
+  left: 5px;
+}
+
+section.all-my-exs
+  .dislikes-options--option
+  input[type="checkbox"]:checked
+  + span::before {
+  content: "\2714";
+  font-size: 1.25em;
+  position: absolute;
+  top: -8px;
+  left: -4px;
+  color: lightskyblue;
+}
+
+section.all-my-exs .dislikes-options--option label {
+  width: 90%;
+  text-align: left;
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+}
+
+section.all-my-exs .dislikes-options--option input:hover,
+section.all-my-exs .dislikes-options--option label:hover {
+  cursor: pointer;
+  color: lightskyblue;
+}
+
+section.all-my-exs .dislikes-display {
+  width: 212px;
+  min-height: 2em;
+  word-wrap: break-word;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border: 1px solid white;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+
+section.all-my-exs button {
+  border: 1px solid skyblue;
+  border-radius: 8px;
+  background-color: skyblue;
+  color: white;
+  padding: 0.75em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+section.all-my-exs button:nth-child(5) {
+  width: 212px;
+}
+
+section.all-my-exs button:hover,
+section.all-my-exs button:active,
+section.all-my-exs button:focus {
+  background-color: lightskyblue;
+}
+
+section.all-my-exs table {
+  border: 2px solid skyblue;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  background-color: white;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+section.all-my-exs table thead th {
+  font-weight: bold;
+  text-align: center;
+  height: 2em;
+  vertical-align: middle;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+section.all-my-exs table thead th:last-child {
+  width: 10%;
+}
+
+section.all-my-exs table tbody td {
+  width: 20%;
+  height: 2em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75em;
+}
+
+section.all-my-exs table tbody tr:nth-child(odd) {
+  color: black;
+  letter-spacing: 1px;
+}
+
+section.all-my-exs table tbody tr:nth-child(even) {
+  background-color: skyblue;
+  color: white;
+  letter-spacing: 1px;
+}
+/* End - AllMyExs */
+
+/* Start - WebSecurity */
+section.web-security {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+}
+
+section.web-security h2 {
+  font-size: 2em;
+}
+
+section.web-security h4 {
+  font-size: 1em;
+}
+
+section.web-security p {
+  font-size: 1em;
+}
+
+section.web-security ul {
+  border: 1px solid;
+  padding: 1em;
+  max-width: 784px;
+  width: 100%;
+  font-weight: bold;
+}
+
+section.web-security ul span {
+  font-weight: lighter;
+}
+
+section.web-security article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+section.web-security article a {
+  color: lightskyblue;
+}
+
+section.web-security article a:hover {
+  color: skyblue;
+}
+
+section.web-security article p {
+  padding-left: 0.25em;
+}
+
+section.web-security.user-location-map #map {
+  width: 500px;
+  height: 500px;
+}
+/* End - WebSecurity */
+
+/* Start - marsRover */
+section.mars-rover {
+  margin: 1em auto;
+}
+
+section.mars-rover.img {
+  margin: 0 0;
+}
+
+section.mars-rover-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.mars-rover.options .earth-date-picker {
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.mars-rover.options .earth-date-picker input {
+  width: 210px;
+  height: 24px;
+  text-align: center;
+}
+
+.mars-rover.options button {
+  background-color: #e77d11;
+  color: white;
+  border: 1px solid #e77d11;
+  padding: 0.5em;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 112px;
+  letter-spacing: 1.25px;
+}
+
+.mars-rover.options button:hover,
+.mars-rover.options button:active,
+.mars-rover.options button.active {
+  background-color: #fda600;
+  border-color: #fda600;
+}
+
+.mars-rover.options input[type=date] {
+  border-radius: 4px;
+}
+
+.mars-rover.options input[type=date].invalid {
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}
+
+.mars-rover.options div.invalid {
+  color: red;
+  margin-top: .25em;
+  height: 1em;
+  font-size: .9em;
+}
+
+.mars-rover.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  position: relative;
+}
+
+.mars-rover #roverImg {
+  width: 100%;
+}
+
+.mars-rover .rover-camera-label {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  color: white;
+  font-size: 2em;
+  padding: 0.25em;
+}
+
+.mars-rover.error-message {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(00,00,00, .5);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: none;
+  place-items: center;
+}
+
+.mars-rover.error-message .error-message-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 228px;
+  height: 228px;
+  background-image: url(images/mars.svg);
+  border-radius: 50%;
+  background-position: center;
+  background-size: contain;  
+}
+
+.mars-rover.error-message .error-message-container::before {
+  content: "\f7bf";
+  font-family: FontAwesome;
+  font-size: 8em;
+}
+
+.mars-rover.error-message .error-message-container .far.fa-times-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.mars-rover.error-message .error-message-container .far.fa-times-circle:hover {
+  opacity: .75;
+}
+
+.mars-rover.error-message .error-message-container h3 {
+  font-size: 1.25em;
+  text-decoration: underline;
+  margin-bottom: .25em;
+}
+/* End - marsRover */
+
+/* Start - Tablet Stlyes */
+@media all and (min-width: 425px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .mars-rover.error-message .error-message-container {
+    height: 24em;
+    width: 24em;
+  }
+
+  .mars-rover.error-message .error-message-container::before {
+    font-size: 16em;
+  }
+}
+/* End - Tablet Styles */
